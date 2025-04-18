@@ -1,0 +1,26 @@
+.dashboard {
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0fff0; /* light green background */
+    min-height: 100vh;
+  }
+  
+  .dash-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2e7d32;
+  }
+  
+  .summary {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #388e3c;
+  }
+  
+  .chart-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 128, 0, 0.1);
+  }
+  

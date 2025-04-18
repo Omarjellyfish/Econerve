@@ -1,11 +1,17 @@
+const express = require("express");
 const router = express.Router();
-const classificationController = require("../../controllers/classfication-controller/classfication-controller");
-router.get("/classify"); //directly acess the model to get a classification
-router.get("/getClassfication", classificationController.getClassification);
-router.get(
-  "/getData/:companyname",
-  authenticateToken,
-  classificationController.getClassificationsByCompany
-);
+const {
+  getClassification,
+  getClassificationsByCompanyHandler,
+  addDummyClassificationHandler,
+} = require("../../controllers/classfication-controller/classfication-controller");
 
-export default router;
+// Example routes
+router.get("/classify", getClassification); // Classification route
+router.get(
+  "/getClassfication/:companyName",
+  getClassificationsByCompanyHandler
+); // Get classifications by company
+router.post("/addDummyClassification", addDummyClassificationHandler); // Add dummy classification data
+
+module.exports = router;

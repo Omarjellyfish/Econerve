@@ -55,7 +55,11 @@ const login = async (req, res) => {
     const accessToken = generateAccessToken(user);
     const refreshToken = await generateRefreshToken(user);
 
-    res.status(200).json({ accessToken, refreshToken });
+    res.status(200).json({
+      accessToken,
+      refreshToken,
+      companyName: user.companyName, // Include company name from the user object
+    });
   } catch (error) {
     res.status(500).json({ message: "Error logging in", error });
   }

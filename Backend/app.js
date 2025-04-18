@@ -19,7 +19,10 @@ mongoose.connect(process.env.CONNECTION_STRING, {}).then(() => {
   };
   app.use(cors(corsOptions));
   const userRouter = require("./routes/user-router");
+  const classificationRouter = require("./routes/classfication-routes/classfication-router");
   app.use("/user", userRouter);
+  app.use("/classification", classificationRouter);
+
   app.listen(port, () => {
     console.log("server is running on", `${port}`);
   });

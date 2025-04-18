@@ -23,7 +23,7 @@ function App() {
     </div>
   </LoginAdmin> */}
   {/* <LandingPage></LandingPage> */}
-  {/* <Dashboard></Dashboard> */}
+  <Dashboard></Dashboard>
 
   </>
   )

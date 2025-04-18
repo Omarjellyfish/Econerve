@@ -35,3 +35,15 @@
     margin-top: 5px;
     margin-bottom: 10px;
   }
+
+  .after-success {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .success-message {
+    color: green;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
